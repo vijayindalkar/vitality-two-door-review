@@ -176,9 +176,15 @@
 .vt2 #top > .wrap > .split{align-items:flex-start;flex-wrap:nowrap;gap:clamp(32px,4vw,48px)}
 .vt2 #top > .wrap > .split > .c7{flex:1 1 0;min-width:0}
 .vt2 #top > .wrap > .split > .c5{flex:0 0 520px;min-width:0;position:sticky;top:96px}
-.vt2 #top .media:not(:has(.play,video,iframe)){aspect-ratio:1380/1542}
-.vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
-.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 14%}
+.vt2 .docstrip{display:flex;align-items:center;gap:18px;margin-top:clamp(24px,3vw,32px)}
+.vt2 .docstrip-p{flex:none;position:relative;display:block;width:88px;height:88px;border-radius:50%;overflow:hidden;background:var(--navy-2);
+  box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--action);margin:5px}
+.vt2 .docstrip-p img{position:absolute;display:block;width:145%;max-width:none;height:auto;left:-22.5%;top:-11.5%}
+.vt2 .docstrip > div{min-width:0}
+.vt2 .docstrip-n{margin:0;font-family:'Big Caslon CC','Libre Caslon Text','Big Caslon',Georgia,serif;font-size:24px;line-height:1.2;color:var(--ink)}
+.vt2 .docstrip-t{margin:4px 0 0;font-size:16px;font-weight:600;line-height:1.35;color:var(--action)}
+.vt2 .docstrip-d{margin:4px 0 0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.vt2 .docstrip-d span{display:block}
 .vt2 #check .c7 > .card{max-width:520px}
 .vt2 [data-survey] .embed iframe{min-height:380px}
 @media (max-width:980px){
@@ -187,8 +193,15 @@
   .vt2 #top > .wrap > .split > .c7 > .hero-copy{order:0;margin-bottom:0}
   .vt2 #top > .wrap > .split > .c7 > figure{order:2;width:100%;margin:32px 0 0}
   .vt2 #top > .wrap > .split > .c5{order:1;flex:none;width:100%;max-width:520px;margin:28px auto 0;position:static}
-  .vt2 #top .media:not(:has(.play,video,iframe)){max-width:520px;margin-left:auto;margin-right:auto}
   .vt2 #check .c7 > .card{margin-left:auto;margin-right:auto}
+  .vt2 #top .docstrip{margin-top:20px}
+}
+@media (max-width:480px){
+  .vt2 .docstrip{gap:14px}
+  .vt2 .docstrip-p{width:72px;height:72px}
+  .vt2 .docstrip-n{font-size:21px}
+  .vt2 .docstrip-t{font-size:15px}
+  .vt2 .docstrip-d{font-size:13.5px}
 }
 </style>
 <div class="vt2" id="vt2-precall">
