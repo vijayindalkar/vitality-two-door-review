@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Two-Door landing pages: design review | Vitality Orthopedics</title><style>
+:root{--bg:#F6F8FB;--fg:#13202E;--muted:#56657A;--line:#D9E1EA;--accent:#17709C;--navy:#132536;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1620;--fg:#E6EDF4;--muted:#9AAABB;--line:#26364A;--accent:#5DB3DE;--card:#15202C}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{max-width:1500px;margin:0 auto;padding:28px 20px 8px}
+h1{font:600 26px/1.2 Georgia,"Times New Roman",serif;margin:0 0 6px}
+p.lede{margin:0;color:var(--muted);max-width:78ch}
+.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:14px}
+
+.bar{max-width:1500px;margin:0 auto;padding:12px 20px;display:flex;gap:12px 24px;flex-wrap:wrap;align-items:center;position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button,.dev button{font:600 13.5px inherit;font-family:inherit;border:1px solid var(--line);background:var(--card);color:var(--fg);padding:8px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed=true],.dev button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.dev{display:flex;gap:6px;margin-left:auto}
+.stage{max-width:1500px;margin:18px auto 0;padding:0 20px 60px}
+.meta{display:flex;gap:10px 20px;flex-wrap:wrap;align-items:baseline;margin-bottom:12px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--fg);font-size:16px}
+.frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 10px 40px rgba(19,37,54,.12);margin:0 auto}
+.frame.desktop{width:100%}
+.frame.mobile{width:390px;max-width:100%;border-radius:34px;border:10px solid #0B1620}
+iframe{display:block;width:100%;height:calc(100vh - 230px);min-height:560px;border:0;background:#fff}
+.frame.mobile iframe{height:min(844px,calc(100vh - 250px))}
+.foot{margin-top:16px;font-size:13.5px;color:var(--muted);max-width:88ch}
+</style></head><body>
+<header class="top"><h1>Two-Door landing pages: design review</h1>
+<p class="lede">Proposed redesign of the nine landing and follow-up pages for Vitality Orthopedics. The surveys, the booking calendar, the guide form and the page buttons are pictures here, so nothing can be submitted or booked. This copy is not indexed by search engines.</p>
+<div class="links"><a href="compare.html">Before and after screenshots</a></div></header>
+<div class="bar"><div class="tabs" id="tabs"></div><div class="dev" id="dev"><button data-d="desktop" aria-pressed="true">Desktop</button><button data-d="mobile" aria-pressed="false">Mobile</button></div></div>
+<main class="stage"><div class="meta"><b id="t"></b><span id="a"></span><a id="o" target="_blank" rel="noopener">Open on its own</a></div>
+<div class="frame desktop" id="frame"><iframe id="f" title="Page preview"></iframe></div>
+<p class="foot">Each page is shown the way a visitor would reach it (for example the booking page as someone who passed the survey). Scroll inside the frame. Send comments to Vijay.</p></main>
+<script>
+var PAGES=[{"slug": "vt-active-life", "label": "Meta regen landing", "audience": "Regen door, from Meta ads", "q": ""}, {"slug": "vt-move-freely", "label": "Google regen landing", "audience": "Regen door, from Google ads", "q": ""}, {"slug": "vt-expert-care", "label": "Meta surgery landing", "audience": "Surgery door, from Meta ads", "q": ""}, {"slug": "vt-specialist-care", "label": "Google surgery landing", "audience": "Surgery door, from Google ads", "q": ""}, {"slug": "vt-book-call", "label": "Booking", "audience": "After a qualified survey", "q": "?q=1&door=1"}, {"slug": "vt-call-confirmed", "label": "Thank you", "audience": "After booking the call", "q": "?t=2026-11-10T14:00:00-05:00&door=1"}, {"slug": "vt-before-call", "label": "Before your call", "audience": "Hub the reminder emails link to", "q": "?d=November%2010%2C%202026&tm=2%3A00%20PM"}, {"slug": "vt-before-visit", "label": "Before your visit", "audience": "Hub the evaluation emails link to", "q": ""}, {"slug": "vt-guide", "label": "Free 45+ guide", "audience": "Anyone who hits a gate", "q": "?reason=distance&door=1"}];var cur=PAGES[0].slug,dev='desktop';
+function show(){var p=PAGES.filter(function(x){return x.slug===cur})[0];
+document.getElementById('f').src='pages/'+p.slug+'.html'+p.q;document.getElementById('t').textContent=p.label;
+document.getElementById('a').textContent=p.audience;document.getElementById('o').href='pages/'+p.slug+'.html'+p.q;
+document.getElementById('frame').className='frame '+dev;
+[].forEach.call(document.querySelectorAll('#tabs button'),function(b){b.setAttribute('aria-pressed',b.dataset.s===cur)});
+[].forEach.call(document.querySelectorAll('#dev button'),function(b){b.setAttribute('aria-pressed',b.dataset.d===dev)});
+history.replaceState(null,'','#'+cur+(dev==='mobile'?'/mobile':''));}
+PAGES.forEach(function(p){var b=document.createElement('button');b.textContent=p.label;b.dataset.s=p.slug;b.onclick=function(){cur=p.slug;show()};document.getElementById('tabs').appendChild(b)});
+[].forEach.call(document.querySelectorAll('#dev button'),function(b){b.onclick=function(){dev=b.dataset.d;show()}});
+function readHash(){var h=location.hash.replace('#','').split('/');if(PAGES.some(function(x){return x.slug===h[0]}))cur=h[0];dev=h[1]==='mobile'?'mobile':'desktop';show();}
+window.addEventListener('hashchange',readHash);readHash();
+</script></body></html>
