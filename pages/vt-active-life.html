@@ -391,6 +391,9 @@
   .vt2 .ftr a{min-height:48px}
 }
 @media (prefers-reduced-motion:reduce){.vt2 .btn,.vt2 .rv{transition:none!important;transform:none!important}}
+.vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
+.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 28%}
+.vt2 #check .c7 > .card{max-width:460px}
 </style>
 <div class="vt2" id="vt2-1">
 <header class="hdr">
@@ -419,7 +422,7 @@
 <div class="c5" id="start">
 <div class="card">
 <p class="card-t">See if you’re likely a candidate</p>
-<p class="small" style="margin-top:4px">About a minute. Nothing to type until the end.</p>
+<p class="small" style="margin-top:4px">Complete 10 quick steps to find out.</p>
 <div style="margin-top:16px" data-survey><figure style="margin:0"><img src="../standins/survey-regen-hero.png" alt="Preview of the live survey" style="display:block;width:100%;height:auto;border-radius:10px"><figcaption class="tiny" style="margin-top:10px">Preview image of the live survey. It is not interactive here.</figcaption></figure></div>
 </div>
 </div>
@@ -469,7 +472,7 @@
 <div class="path">
 <svg class="path-line" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32 C 100 0, 150 0, 200 32 S 300 64, 400 32 S 500 0, 600 32 S 700 64, 800 32 S 900 0, 1000 32 S 1100 64, 1200 32" fill="none" stroke="#132536" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
 <ol>
-<li><div class="node">01</div><h3 class="serif step-h">A free call with Dr. Ziegler</h3><p class="step-p">Fifteen minutes by phone, so you know whether an evaluation makes sense before you drive to Simsbury.</p></li>
+<li><div class="node">01</div><h3 class="serif step-h">A free call with Dr. Ziegler’s team</h3><p class="step-p">Fifteen minutes by phone, so you know whether an evaluation makes sense before you drive to Simsbury.</p></li>
 <li><div class="node">02</div><h3 class="serif step-h">Your evaluation in Simsbury</h3><p class="step-p">About an hour with Dr. Ziegler. He examines the joint, looks at it under ultrasound, goes over any imaging with you and tells you whether you’re a candidate.</p></li>
 <li><div class="node">03</div><h3 class="serif step-h">Your plan and price</h3><p class="step-p">If you’re a candidate, you get his recommendation and a flat price up front. Treatment happens in the Simsbury office, with follow-up visits to check how the joint is responding.</p></li>
 </ol>
@@ -537,16 +540,16 @@
 <div class="split" style="align-items:flex-start">
 <div class="c7">
 <h2 class="serif h2">See if you’re likely a candidate</h2>
-<p class="lede" style="margin-top:14px">If you book a call, Dr. Ziegler will already have your answers, so you won’t have to repeat yourself.</p>
+<p class="lede" style="margin-top:14px">If you book a call, Dr. Ziegler’s team will already have your answers, so you won’t have to repeat yourself.</p>
 <div class="card" style="margin-top:28px"><div data-survey><figure style="margin:0"><img src="../standins/survey-regen-wide.png" alt="Preview of the live survey" style="display:block;width:100%;height:auto;border-radius:10px"><figcaption class="tiny" style="margin-top:10px">Preview image of the live survey. It is not interactive here.</figcaption></figure></div></div>
 </div>
 <div class="c5">
-<h3 class="serif h3">What happens on your call with Dr. Ziegler</h3>
+<h3 class="serif h3">What happens on your call with Dr. Ziegler’s team</h3>
 <ul class="rows sm" style="margin-top:22px">
-<li>It’s a free 15-minute phone call with Dr. Ziegler himself.</li>
-<li>He’ll ask about the pain, what you’ve tried and what you want to be able to do again.</li>
+<li>It’s a free 15-minute phone call with Dr. Ziegler’s team.</li>
+<li>They’ll ask about the pain, what you’ve tried and what you want to be able to do again.</li>
 <li>You’ll hear how his care works and what the evaluation involves, before you commit to anything.</li>
-<li>If an evaluation makes sense, he’ll book it with you on the call. If it doesn’t, he’ll tell you.</li>
+<li>If an evaluation makes sense, they’ll book it with you on the call. If it doesn’t, they’ll tell you.</li>
 </ul>
 </div>
 </div>
@@ -586,7 +589,7 @@
 <div class="split" style="align-items:flex-start">
 <div class="c4"><h2 class="serif h2s" style="max-width:14ch">Questions people ask before they book</h2></div>
 <div class="c8"><details class="fq"><summary>Is this treatment safe?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Platelet-rich plasma and bone marrow concentrate come from your own body, so there’s no donor material for your body to reject. The most common side effect is soreness for a few days where the injection went in. Dr. Ziegler goes over the risks for your situation at your evaluation.</p></div></details>
-<details class="fq"><summary>What does it cost, and does insurance cover any of it?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Dr. Ziegler’s care is self-pay, and he doesn’t bill insurance. The call is free. He walks you through the investment for the evaluation and any treatment on the call. At the evaluation, you get a flat price for your plan before you commit to anything.</p></div></details>
+<details class="fq"><summary>What does it cost, and does insurance cover any of it?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Dr. Ziegler’s care is self-pay, and he doesn’t bill insurance. The call is free. His team walks you through the investment for the evaluation and any treatment on the call. At the evaluation, you get a flat price for your plan before you commit to anything.</p></div></details>
 <details class="fq"><summary>Does it hurt, and how much time will I miss?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>You’ll feel pressure during the injection. Treatment usually takes one to two hours in the office, and most people go home the same day. Dr. Ziegler gives you a plan for the weeks after.</p></div></details>
 <details class="fq"><summary>How long do results last?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>It depends on the joint and how much damage there is, so Dr. Ziegler won’t promise a number. He’ll tell you what’s realistic once he’s examined you.</p></div></details>
 <details class="fq"><summary>I was told my knee is bone on bone. Is a call still worth it?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Yes. Plenty of people hear “bone on bone” and still have options. Dr. Ziegler will examine the knee and tell you whether non-surgical treatment is worth trying, or whether it’s time to plan for something else.</p></div></details>
@@ -601,7 +604,7 @@
 <div class="wrap">
 <svg width="220" height="40" viewBox="0 0 220 40" aria-hidden="true"><path d="M2 20 C 30 0, 50 0, 70 20 S 110 40, 130 20 S 170 0, 190 20 S 210 34, 218 20" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round"/><circle cx="70" cy="20" r="7" fill="#FEFEFF" stroke="#132536" stroke-width="2"/><circle cx="130" cy="20" r="7" fill="#FEFEFF" stroke="#132536" stroke-width="2"/><circle cx="190" cy="20" r="7" fill="#132536"/></svg>
 <h2 class="serif" style="margin-top:32px;font-size:clamp(34px,4.4vw,54px);line-height:1.08;max-width:20ch;color:#000321" data-v="finalH">Find out if you can skip surgery.</h2>
-<p class="lede" style="margin-top:20px;text-align:center">Answer a few short questions. If you’re a fit, you’ll pick a time for a free 15-minute call with Dr. Ziegler.</p>
+<p class="lede" style="margin-top:20px;text-align:center">Answer a few short questions. If you’re a fit, you’ll pick a time for a free 15-minute call with Dr. Ziegler’s team.</p>
 <a class="btn" href="#check" style="margin-top:32px">See if I’m a candidate</a>
 </div>
 </section>
@@ -621,7 +624,7 @@
 </footer>
 <div class="mbar"><a class="btn btn-full" href="#check">See if I’m a candidate</a></div>
 </div>
-<script>window.VT2={"page": "regenerative", "door": "1", "seg": {"default": {"h1": "Relief from knee and shoulder pain, without surgery.", "pre": "Tried physical therapy and cortisone, and still hurting?", "part": "knee or shoulder", "joint": "joint", "probH": "You’ve been working around knee or shoulder pain for a while now.", "problems": ["You plan your day around whether the joint will hold up.", "You take the stairs one at a time, or reach for the top shelf with the other arm.", "You’ve quit golf, tennis, pickleball or the morning walk, and you miss it.", "Cortisone helps for a shorter stretch every time.", "The last visit ended with “come back when it gets worse.”", "Getting down on the floor with the grandkids, and back up, takes planning."], "outcomes": ["Take the stairs without reaching for the rail.", "Swing a club or a racket again.", "Get down on the floor with the grandkids, and back up.", "Sleep through the night."], "finalH": "Find out if you can skip surgery."}, "knee": {"h1": "Relief from knee pain, without surgery.", "pre": "Tried physical therapy and cortisone, and your knee still hurts?", "part": "knee", "joint": "knee", "probH": "You’ve been working around knee pain for a while now.", "problems": ["You plan your day around whether the knee will hold up.", "You take the stairs one at a time, or sideways.", "You’ve quit golf, tennis, pickleball or the morning walk, and you miss it.", "Cortisone helps for a shorter stretch every time.", "The last visit ended with “come back when it gets worse.”", "Getting down on the floor with the grandkids, and back up, takes planning."], "outcomes": ["Take the stairs without reaching for the rail.", "Walk the Talcott Mountain trail on a fall Saturday.", "Get down on the floor with the grandkids, and back up.", "Sleep through the night."], "finalH": "Find out if you can skip knee surgery."}, "shoulder": {"h1": "Relief from shoulder pain, without surgery.", "pre": "Tried physical therapy and cortisone, and your shoulder still hurts?", "part": "shoulder", "joint": "shoulder", "probH": "You’ve been working around shoulder pain for a while now.", "problems": ["Reaching for the top shelf or the seatbelt makes you wince.", "You can’t sleep on that side anymore.", "You’ve stopped playing tennis, golf or pickleball because of the shoulder.", "Cortisone helps for a shorter stretch every time.", "A surgeon mentioned an operation and months of rehab, and you want to know what else is out there first.", "Getting dressed hurts more than it should."], "outcomes": ["Reach the top shelf without a second thought.", "Swing a club or a racket again.", "Sleep on that side.", "Lift a carry-on into the overhead bin."], "finalH": "Find out if you can skip shoulder surgery."}}, "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6f8fa6a03cda06271345.jpg"}, "surveyId": "", "pixel": "",events:[]};</script>
+<script>window.VT2={"page": "regenerative", "door": "1", "seg": {"default": {"h1": "Relief from knee and shoulder pain, without surgery.", "pre": "Tried physical therapy and cortisone, and still hurting?", "part": "knee or shoulder", "joint": "joint", "probH": "You’ve been working around knee or shoulder pain for a while now.", "problems": ["You plan your day around whether the joint will hold up.", "You take the stairs one at a time, or reach for the top shelf with the other arm.", "You’ve quit golf, tennis, pickleball or the morning walk, and you miss it.", "Cortisone helps for a shorter stretch every time.", "The last visit ended with “come back when it gets worse.”", "Getting down on the floor with the grandkids, and back up, takes planning."], "outcomes": ["Take the stairs without reaching for the rail.", "Swing a club or a racket again.", "Get down on the floor with the grandkids, and back up.", "Sleep through the night."], "finalH": "Find out if you can skip surgery."}, "knee": {"h1": "Relief from knee pain, without surgery.", "pre": "Tried physical therapy and cortisone, and your knee still hurts?", "part": "knee", "joint": "knee", "probH": "You’ve been working around knee pain for a while now.", "problems": ["You plan your day around whether the knee will hold up.", "You take the stairs one at a time, or sideways.", "You’ve quit golf, tennis, pickleball or the morning walk, and you miss it.", "Cortisone helps for a shorter stretch every time.", "The last visit ended with “come back when it gets worse.”", "Getting down on the floor with the grandkids, and back up, takes planning."], "outcomes": ["Take the stairs without reaching for the rail.", "Walk the Talcott Mountain trail on a fall Saturday.", "Get down on the floor with the grandkids, and back up.", "Sleep through the night."], "finalH": "Find out if you can skip knee surgery."}, "shoulder": {"h1": "Relief from shoulder pain, without surgery.", "pre": "Tried physical therapy and cortisone, and your shoulder still hurts?", "part": "shoulder", "joint": "shoulder", "probH": "You’ve been working around shoulder pain for a while now.", "problems": ["Reaching for the top shelf or the seatbelt makes you wince.", "You can’t sleep on that side anymore.", "You’ve stopped playing tennis, golf or pickleball because of the shoulder.", "Cortisone helps for a shorter stretch every time.", "A surgeon mentioned an operation and months of rehab, and you want to know what else is out there first.", "Getting dressed hurts more than it should."], "outcomes": ["Reach the top shelf without a second thought.", "Swing a club or a racket again.", "Sleep on that side.", "Lift a carry-on into the overhead bin."], "finalH": "Find out if you can skip shoulder surgery."}}, "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "../standins/ziegler-hero.jpg"}, "surveyId": "", "pixel": "",events:[]};</script>
 <script>
 (function () {
   'use strict';

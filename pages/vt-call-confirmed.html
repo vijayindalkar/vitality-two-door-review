@@ -391,6 +391,9 @@
   .vt2 .ftr a{min-height:48px}
 }
 @media (prefers-reduced-motion:reduce){.vt2 .btn,.vt2 .rv{transition:none!important;transform:none!important}}
+.vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
+.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 28%}
+.vt2 #check .c7 > .card{max-width:460px}
 </style>
 <div class="vt2" id="vt2-booked">
 <header class="hdr">
@@ -411,8 +414,8 @@
 <div class="split" style="margin-top:clamp(24px,3vw,36px);align-items:flex-start">
 <div class="c7">
 <h1 class="serif h1" style="font-size:clamp(34px,4.2vw,52px);max-width:22ch">You’re booked<span data-first></span>. Here’s what happens next.</h1>
-<p class="lede" style="margin-top:18px" data-ifvideo>Dr. Ziegler has set aside 15 minutes to talk with you. Watch his short video so you know what to expect.</p>
-<p class="lede" style="margin-top:18px" data-novideo hidden>Dr. Ziegler has set aside 15 minutes to talk with you. Two quick things now will make sure you don’t miss him.</p>
+<p class="lede" style="margin-top:18px" data-ifvideo>Dr. Ziegler’s team has set aside 15 minutes to talk with you. Watch Dr. Ziegler’s short video so you know what to expect.</p>
+<p class="lede" style="margin-top:18px" data-novideo hidden>Dr. Ziegler’s team has set aside 15 minutes to talk with you. Two quick things now will make sure you don’t miss them.</p>
 <figure style="margin-top:28px" data-ifvideo>
 <div class="media" data-video="Post-booking thank-you page VSL (Google Doc “Vitality Orthopedics VSLs”)" data-poster="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg" data-alt="Dr. Connor Ziegler"></div>
 </figure>
@@ -422,11 +425,11 @@
 <p class="eyebrow">Your call</p>
 <p class="serif" style="margin-top:10px;font-size:28px;line-height:1.2;color:#F6F8FB" data-if-when><span data-when="date"></span><br><span data-when="time"></span></p>
 <p class="serif" style="margin-top:10px;font-size:24px;line-height:1.25;color:#F6F8FB" data-no-when>Check your email for your time.</p>
-<p style="margin-top:12px;color:#E6ECF2">Phone call · 15 minutes · with Dr. Ziegler</p>
-<p class="small" style="margin-top:6px;color:#B8C6D3">He’ll call the number you gave us, from (860) 735-3744. Save it so you pick up.</p>
+<p style="margin-top:12px;color:#E6ECF2">Phone call · 15 minutes · with Dr. Ziegler’s team</p>
+<p class="small" style="margin-top:6px;color:#B8C6D3">His team will call the number you gave us, from (860) 735-3744. Save it so you pick up.</p>
 <div data-addcal data-if-when style="margin-top:20px;display:flex;flex-wrap:wrap;gap:10px">
 <a class="btn btn-sm" data-addcal-google href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
-<a class="btn btn-sm btn-ghost" data-addcal-ics href="#" download="call-with-dr-ziegler.ics" style="color:#F6F8FB;box-shadow:inset 0 0 0 1px rgba(230,236,242,.4)">Apple or Outlook</a>
+<a class="btn btn-sm btn-ghost" data-addcal-ics href="#" download="call-with-dr-zieglers-team.ics" style="color:#F6F8FB;box-shadow:inset 0 0 0 1px rgba(230,236,242,.4)">Apple or Outlook</a>
 </div>
 <p class="small" style="margin-top:16px;color:#B8C6D3">Need a different time? Use the reschedule link in your confirmation email.</p>
 </div>
@@ -447,9 +450,9 @@
 <div class="split" style="align-items:center">
 <div class="c5"><div class="portrait" style="max-width:380px"><img src="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6c93cf50f900f2edb226.png" alt="Dr. Connor Ziegler" loading="lazy"></div></div>
 <div class="c7">
-<p class="eyebrow">Who will call you</p>
+<p class="eyebrow">Your surgeon</p>
 <h2 class="serif h2" style="margin-top:12px">Dr. Connor Ziegler</h2>
-<p class="lede" style="margin-top:14px">Board-certified orthopedic surgeon. He takes these calls himself, so you’ll be talking with the surgeon from the first minute.</p>
+<p class="lede" style="margin-top:14px">Board-certified orthopedic surgeon. His team, usually Jose Ramirez, makes this call, and you’ll see Dr. Ziegler himself at your evaluation.</p>
 <h3 class="serif h3" style="margin-top:32px">To get the most from 15 minutes</h3>
 <ul class="ticks" style="margin-top:10px">
 <li><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true" style="flex:none;margin-top:9px"><path d="M1 6 C 6 0, 10 0, 11 6 S 16 12, 21 6" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round"/></svg><span>Be somewhere quiet, and not driving.</span></li>
@@ -509,7 +512,7 @@
 </div>
 </footer>
 </div>
-<script>window.VT2={"pixel": "", "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6f8fa6a03cda06271345.jpg"}, "seg": {}, "surveyId": "", "page": "call-booked", "apptMinutes": 15, "apptTitle": "Call with Dr. Connor Ziegler", "apptDetails": "Free 15-minute phone call. Dr. Ziegler will call you from (860) 735-3744.",events:[{name:"Schedule",custom:false,params:["door"]}]};</script>
+<script>window.VT2={"pixel": "", "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "../standins/ziegler-hero.jpg"}, "seg": {}, "surveyId": "", "page": "call-booked", "apptMinutes": 15, "apptTitle": "Call with Dr. Ziegler’s team", "apptDetails": "Free 15-minute phone call. Dr. Ziegler’s team will call you from (860) 735-3744.",events:[{name:"Schedule",custom:false,params:["door"]}]};</script>
 <script>
 (function () {
   'use strict';

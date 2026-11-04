@@ -391,6 +391,9 @@
   .vt2 .ftr a{min-height:48px}
 }
 @media (prefers-reduced-motion:reduce){.vt2 .btn,.vt2 .rv{transition:none!important;transform:none!important}}
+.vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
+.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 28%}
+.vt2 #check .c7 > .card{max-width:460px}
 </style>
 <div class="vt2" id="vt2-precall">
 <header class="hdr">
@@ -402,7 +405,7 @@
 <a href="#watch">Watch first</a><a href="#call">Your call</a><a href="#clinic">Dr. Ziegler</a><a href="#stories">Patients</a><a href="#ready">Get ready</a><a href="#faq">Questions</a><a href="#change">Change your time</a>
 </nav>
 </header>
-<div class="apptbar" data-if-when hidden><div class="wrap"><strong>Your call with Dr. Ziegler:</strong> <span data-when="date"></span> at <span data-when="time"></span> · He’ll call from (860) 735-3744</div></div>
+<div class="apptbar" data-if-when hidden><div class="wrap"><strong>Your call with Dr. Ziegler’s team:</strong> <span data-when="date"></span> at <span data-when="time"></span> · They’ll call from (860) 735-3744</div></div>
 <section id="watch" class="sec" style="padding-top:clamp(32px,5vw,64px)">
 <div class="wrap">
 <div class="split" style="align-items:flex-start">
@@ -412,15 +415,15 @@
 <div class="media" data-video="Pre-call page VSL (Google Doc “Vitality Orthopedics VSLs”)" data-poster="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg" data-alt="Dr. Connor Ziegler"></div>
 <figcaption class="tiny" style="margin-top:10px">Individual results vary.</figcaption>
 </figure>
-<p class="lede" style="margin-top:18px" data-novideo hidden>Your call is free, it’s 15 minutes, and it’s with Dr. Ziegler himself. Here’s what he’ll cover and how to get ready.</p>
+<p class="lede" style="margin-top:18px" data-novideo hidden>Your call is free, it’s 15 minutes, and it’s with Dr. Ziegler’s team. Here’s what they’ll cover and how to get ready.</p>
 </div>
 <div class="c5">
 <div class="card">
-<p class="card-t">Let Dr. Ziegler know you’ll be there</p>
+<p class="card-t">Let Dr. Ziegler’s team know you’ll be there</p>
 <p class="small" style="margin-top:6px">One tap, and his office knows your time is set.</p>
 <div style="margin-top:16px">
 <button type="button" class="btn btn-full" data-confirm="precall_confirmed">I’m all set for my call</button>
-<p data-confirm-done hidden style="font-weight:600;color:#000321">Thanks. Dr. Ziegler will call you at your scheduled time.</p>
+<p data-confirm-done hidden style="font-weight:600;color:#000321">Thanks. Dr. Ziegler’s team will call you at your scheduled time.</p>
 </div>
 </div>
 </div>
@@ -443,7 +446,7 @@
 <div class="split" style="align-items:center">
 <div class="c5"><div class="portrait" style="max-width:400px"><img src="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6c93cf50f900f2edb226.png" alt="Dr. Connor Ziegler" loading="lazy"></div></div>
 <div class="c7">
-<p class="eyebrow">The surgeon on your call</p>
+<p class="eyebrow">Your surgeon</p>
 <h2 class="serif h2" style="margin-top:12px">Dr. Connor Ziegler</h2>
 <p class="lede" style="margin-top:14px">Board-certified orthopedic surgeon, fellowship-trained at The Steadman Clinic in Vail. He treats knees and shoulders with surgery and without it.</p>
 <h3 class="serif h3" style="margin-top:28px">How he puts it</h3>
@@ -452,7 +455,7 @@
 <li>“We choose the right treatment, not just the treatment we happen to sell.”</li>
 <li>“We don’t stop at feeling better. Our goal is getting you back to performing the activities that matter to you.”</li>
 </ul>
-<p class="small" style="margin-top:20px">Jose Ramirez, his practice manager, handles scheduling and follow-up. If you hear from Jose, that’s Dr. Ziegler’s office.</p>
+<p class="small" style="margin-top:20px">Jose Ramirez, from Dr. Ziegler’s team, usually makes your call and handles scheduling and follow-up. If you hear from Jose, that’s Dr. Ziegler’s office.</p>
 </div>
 </div>
 </div>
@@ -514,11 +517,11 @@
 <div class="wrap">
 <div class="split" style="align-items:flex-start">
 <div class="c4"><h2 class="serif h2s mw" style="max-width:14ch">Cost and other questions</h2></div>
-<div class="c8"><details class="fq"><summary>Is this a sales call?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>No. Nobody will ask you to start treatment on the phone. Dr. Ziegler listens, explains how his care works and books your evaluation if it makes sense.</p></div></details>
+<div class="c8"><details class="fq"><summary>Is this a sales call?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>No. Nobody will ask you to start treatment on the phone. His team listens, explains how Dr. Ziegler’s care works and books your evaluation if it makes sense.</p></div></details>
 <details class="fq"><summary>Does insurance cover any of it?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>No. Dr. Ziegler’s care is self-pay, surgery included, and he doesn’t bill insurance.</p></div></details>
-<details class="fq"><summary>What will it cost?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>The call is free. Dr. Ziegler walks you through the investment for the evaluation on the call, and at the evaluation you get a flat price for your plan before you commit to anything.</p></div></details>
-<details class="fq"><summary>What if I’m not a candidate?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>He’ll tell you, and why. Fifteen minutes is a fair trade for knowing where you stand.</p></div></details>
-<details class="fq"><summary>Will he have my answers?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Yes. What you told us will be in front of him, so you won’t have to start from scratch.</p></div></details>
+<details class="fq"><summary>What will it cost?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>The call is free. His team walks you through the investment for the evaluation on the call, and at the evaluation you get a flat price for your plan before you commit to anything.</p></div></details>
+<details class="fq"><summary>What if I’m not a candidate?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>His team will tell you, and why. Fifteen minutes is a fair trade for knowing where you stand.</p></div></details>
+<details class="fq"><summary>Will they have my answers?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Yes. What you told us will be in front of the team, so you won’t have to start from scratch.</p></div></details>
 </div>
 </div>
 </div>
@@ -544,7 +547,7 @@
 </div>
 </footer>
 </div>
-<script>window.VT2={"pixel": "", "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6f8fa6a03cda06271345.jpg"}, "seg": {}, "surveyId": "", "page": "pre-call", "webhook": "",events:[]};</script>
+<script>window.VT2={"pixel": "", "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "../standins/ziegler-hero.jpg"}, "seg": {}, "surveyId": "", "page": "pre-call", "webhook": "",events:[]};</script>
 <script>
 (function () {
   'use strict';

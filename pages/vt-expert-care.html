@@ -391,6 +391,9 @@
   .vt2 .ftr a{min-height:48px}
 }
 @media (prefers-reduced-motion:reduce){.vt2 .btn,.vt2 .rv{transition:none!important;transform:none!important}}
+.vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
+.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 28%}
+.vt2 #check .c7 > .card{max-width:460px}
 </style>
 <div class="vt2" id="vt2-2">
 <header class="hdr">
@@ -419,7 +422,7 @@
 <div class="c5" id="start">
 <div class="card">
 <p class="card-t">See if Dr. Ziegler can help</p>
-<p class="small" style="margin-top:4px">About a minute. Nothing to type until the end.</p>
+<p class="small" style="margin-top:4px">Complete 11 quick steps to find out.</p>
 <div style="margin-top:16px" data-survey><figure style="margin:0"><img src="../standins/survey-surgery-hero.png" alt="Preview of the live survey" style="display:block;width:100%;height:auto;border-radius:10px"><figcaption class="tiny" style="margin-top:10px">Preview image of the live survey. It is not interactive here.</figcaption></figure></div>
 </div>
 </div>
@@ -469,7 +472,7 @@
 <div class="path">
 <svg class="path-line" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32 C 100 0, 150 0, 200 32 S 300 64, 400 32 S 500 0, 600 32 S 700 64, 800 32 S 900 0, 1000 32 S 1100 64, 1200 32" fill="none" stroke="#132536" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
 <ol>
-<li><div class="node">01</div><h3 class="serif step-h">A free call with Dr. Ziegler</h3><p class="step-p">Fifteen minutes by phone, so you know whether an evaluation makes sense before you drive to Simsbury.</p></li>
+<li><div class="node">01</div><h3 class="serif step-h">A free call with Dr. Ziegler’s team</h3><p class="step-p">Fifteen minutes by phone, so you know whether an evaluation makes sense before you drive to Simsbury.</p></li>
 <li><div class="node">02</div><h3 class="serif step-h">Your evaluation in Simsbury</h3><p class="step-p">About an hour with Dr. Ziegler. He examines the joint, goes over your MRI or x-rays with you in plain language and tells you whether surgery is the right call now, later or not at all.</p></li>
 <li><div class="node">03</div><h3 class="serif step-h">Your plan and price</h3><p class="step-p">If surgery is right for you, you get the surgical plan and the recovery plan around it, with a flat price up front.</p></li>
 </ol>
@@ -532,16 +535,16 @@
 <div class="split" style="align-items:flex-start">
 <div class="c7">
 <h2 class="serif h2">See if Dr. Ziegler can help</h2>
-<p class="lede" style="margin-top:14px">If you book a call, he’ll already have your answers, so you won’t have to repeat yourself.</p>
+<p class="lede" style="margin-top:14px">If you book a call, his team will already have your answers, so you won’t have to repeat yourself.</p>
 <div class="card" style="margin-top:28px"><div data-survey><figure style="margin:0"><img src="../standins/survey-surgery-wide.png" alt="Preview of the live survey" style="display:block;width:100%;height:auto;border-radius:10px"><figcaption class="tiny" style="margin-top:10px">Preview image of the live survey. It is not interactive here.</figcaption></figure></div></div>
 </div>
 <div class="c5">
-<h3 class="serif h3">What happens on your call with Dr. Ziegler</h3>
+<h3 class="serif h3">What happens on your call with Dr. Ziegler’s team</h3>
 <ul class="rows sm" style="margin-top:22px">
-<li>It’s a free 15-minute phone call with Dr. Ziegler himself.</li>
-<li>Tell him what you’ve been told, what you’ve tried and what you want to get back to.</li>
-<li>He’ll explain how surgery and recovery work at Vitality and what the evaluation involves.</li>
-<li>If an evaluation makes sense, he’ll book it with you on the call. If it doesn’t, he’ll tell you.</li>
+<li>It’s a free 15-minute phone call with Dr. Ziegler’s team.</li>
+<li>Tell them what you’ve been told, what you’ve tried and what you want to get back to.</li>
+<li>They’ll explain how surgery and recovery work at Vitality and what the evaluation involves.</li>
+<li>If an evaluation makes sense, they’ll book it with you on the call. If it doesn’t, they’ll tell you.</li>
 </ul>
 </div>
 </div>
@@ -595,7 +598,7 @@
 <div class="wrap">
 <svg width="220" height="40" viewBox="0 0 220 40" aria-hidden="true"><path d="M2 20 C 30 0, 50 0, 70 20 S 110 40, 130 20 S 170 0, 190 20 S 210 34, 218 20" fill="none" stroke="#132536" stroke-width="2" stroke-linecap="round"/><circle cx="70" cy="20" r="7" fill="#FEFEFF" stroke="#132536" stroke-width="2"/><circle cx="130" cy="20" r="7" fill="#FEFEFF" stroke="#132536" stroke-width="2"/><circle cx="190" cy="20" r="7" fill="#132536"/></svg>
 <h2 class="serif" style="margin-top:32px;font-size:clamp(34px,4.4vw,54px);line-height:1.08;max-width:20ch;color:#000321" data-v="finalH">Get a surgeon’s answer, and a price, before you decide.</h2>
-<p class="lede" style="margin-top:20px;text-align:center">Answer a few short questions. If it looks like a fit, you’ll pick a time for a free 15-minute call with Dr. Ziegler.</p>
+<p class="lede" style="margin-top:20px;text-align:center">Answer a few short questions. If it looks like a fit, you’ll pick a time for a free 15-minute call with Dr. Ziegler’s team.</p>
 <a class="btn" href="#check" style="margin-top:32px">See if Dr. Ziegler can help</a>
 </div>
 </section>
@@ -615,7 +618,7 @@
 </footer>
 <div class="mbar"><a class="btn btn-full" href="#check">See if Dr. Ziegler can help</a></div>
 </div>
-<script>window.VT2={"page": "surgery", "door": "2", "seg": {"default": {"part": "knee or shoulder", "joint": "joint", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need knee or shoulder surgery?"}, "knee": {"part": "knee", "joint": "knee", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need knee surgery?"}, "shoulder": {"part": "shoulder", "joint": "shoulder", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need shoulder surgery?"}}, "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7f6f8fa6a03cda06271345.jpg"}, "surveyId": "", "pixel": "",events:[]};</script>
+<script>window.VT2={"page": "surgery", "door": "2", "seg": {"default": {"part": "knee or shoulder", "joint": "joint", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need knee or shoulder surgery?"}, "knee": {"part": "knee", "joint": "knee", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need knee surgery?"}, "shoulder": {"part": "shoulder", "joint": "shoulder", "finalH": "Get a surgeon’s answer, and a price, before you decide.", "pre": "Told you need shoulder surgery?"}}, "video": {"url": "", "poster": "https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg", "still": "../standins/ziegler-hero.jpg"}, "surveyId": "", "pixel": "",events:[]};</script>
 <script>
 (function () {
   'use strict';
