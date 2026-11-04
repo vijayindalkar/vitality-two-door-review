@@ -172,9 +172,24 @@
   .vt2 .tbl td[data-l]::before{content:attr(data-l);display:block;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 }
 @media (prefers-reduced-motion:reduce){.vt2 *{transition:none!important;scroll-behavior:auto!important}}
+.vt2 .hero-copy{margin-bottom:clamp(28px,3.2vw,40px)}
+.vt2 #top > .wrap > .split{align-items:flex-start;flex-wrap:nowrap;gap:clamp(32px,4vw,48px)}
+.vt2 #top > .wrap > .split > .c7{flex:1 1 0;min-width:0}
+.vt2 #top > .wrap > .split > .c5{flex:0 0 520px;min-width:0;position:sticky;top:96px}
+.vt2 #top .media:not(:has(.play,video,iframe)){aspect-ratio:1380/1542}
 .vt2 .media:not(:has(.play,video,iframe)){aspect-ratio:4/3}
-.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 12%}
-.vt2 #check .c7 > .card{max-width:460px}
+.vt2 .media:not(:has(.play,video,iframe)) img{object-position:50% 14%}
+.vt2 #check .c7 > .card{max-width:520px}
+.vt2 [data-survey] .embed iframe{min-height:380px}
+@media (max-width:980px){
+  .vt2 #top > .wrap > .split{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:0}
+  .vt2 #top > .wrap > .split > .c7{display:contents}
+  .vt2 #top > .wrap > .split > .c7 > .hero-copy{order:0;margin-bottom:0}
+  .vt2 #top > .wrap > .split > .c7 > figure{order:2;width:100%;margin:32px 0 0}
+  .vt2 #top > .wrap > .split > .c5{order:1;flex:none;width:100%;max-width:520px;margin:28px auto 0;position:static}
+  .vt2 #top .media:not(:has(.play,video,iframe)){max-width:520px;margin-left:auto;margin-right:auto}
+  .vt2 #check .c7 > .card{margin-left:auto;margin-right:auto}
+}
 </style>
 <div class="vt2" id="vt2-2">
 <header class="hdr">
@@ -188,13 +203,13 @@
 </header>
 <section id="top" style="padding:clamp(36px,5vw,64px) 0 clamp(40px,5vw,64px)">
 <div class="wrap">
-<p class="eyebrow">Knee and shoulder surgery · Simsbury, CT</p>
+<div class="split" style="margin-top:clamp(28px,4vw,44px);align-items:flex-start">
+<div class="c7">
+<div class="hero-copy"><p class="eyebrow">Knee and shoulder surgery · Simsbury, CT</p>
 <p class="serif pre" style="margin-top:16px" data-v="pre">Told you need knee or shoulder surgery?</p>
 <h1 class="serif h1" style="margin-top:10px;max-width:24ch">Get the best care, not just what insurance will cover.</h1>
 <p class="lede" style="margin-top:20px" data-ifvideo>See Dr. Connor Ziegler, a Steadman-trained orthopedic surgeon, as soon as this week, with your recovery planned before surgery day. You get one flat price up front, with no deductibles or insurance claims.</p>
-<p class="lede" style="margin-top:20px" data-novideo hidden>See Dr. Connor Ziegler, a Steadman-trained orthopedic surgeon, as soon as this week, with your recovery planned before surgery day. You get one flat price up front, with no deductibles or insurance claims.</p>
-<div class="split" style="margin-top:clamp(28px,4vw,44px);align-items:flex-start">
-<div class="c7">
+<p class="lede" style="margin-top:20px" data-novideo hidden>See Dr. Connor Ziegler, a Steadman-trained orthopedic surgeon, as soon as this week, with your recovery planned before surgery day. You get one flat price up front, with no deductibles or insurance claims.</p></div>
 <figure>
 <div class="media" data-video="Landing page, surgery VSL (Google Doc “Vitality Orthopedics VSLs”)" data-poster="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg" data-alt="Dr. Connor Ziegler in his Simsbury office"></div>
 <figcaption class="tiny" style="margin-top:12px">Individual results vary.</figcaption>
