@@ -177,9 +177,9 @@
 .vt2 #top > .wrap > .split > .c7{flex:1 1 0;min-width:0}
 .vt2 #top > .wrap > .split > .c5{flex:0 0 520px;min-width:0;position:sticky;top:96px}
 .vt2 .docstrip{display:flex;align-items:center;gap:18px;margin-top:clamp(24px,3vw,32px)}
-.vt2 .docstrip-p{flex:none;position:relative;display:block;width:88px;height:88px;border-radius:50%;overflow:hidden;background:var(--navy-2);
+.vt2 .docstrip-p{flex:none;position:relative;display:block;width:112px;height:112px;border-radius:50%;overflow:hidden;background:var(--navy-2);
   box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--action);margin:5px}
-.vt2 .docstrip-p img{position:absolute;display:block;width:145%;max-width:none;height:auto;left:-22.5%;top:-11.5%}
+.vt2 .docstrip-p img{position:absolute;display:block;width:100%;max-width:none;height:auto;left:0;top:0}
 .vt2 .docstrip > div{min-width:0}
 .vt2 .docstrip-n{margin:0;font-family:'Big Caslon CC','Libre Caslon Text','Big Caslon',Georgia,serif;font-size:24px;line-height:1.2;color:var(--ink)}
 .vt2 .docstrip-t{margin:4px 0 0;font-size:16px;font-weight:600;line-height:1.35;color:var(--action)}
@@ -198,7 +198,7 @@
 }
 @media (max-width:480px){
   .vt2 .docstrip{gap:14px}
-  .vt2 .docstrip-p{width:72px;height:72px}
+  .vt2 .docstrip-p{width:88px;height:88px}
   .vt2 .docstrip-n{font-size:21px}
   .vt2 .docstrip-t{font-size:15px}
   .vt2 .docstrip-d{font-size:13.5px}
@@ -224,7 +224,6 @@
 <div class="c7">
 <h1 class="serif h1" style="font-size:clamp(34px,4.2vw,52px);max-width:22ch">Good news<span data-first></span>. You look like a good fit for a call with Dr. Ziegler’s team.</h1>
 <p class="lede" style="margin-top:18px">Pick a time for a free 15-minute phone call with Dr. Ziegler’s team. If an evaluation makes sense, they’ll book it with you on the call.</p>
-<p class="small" style="margin-top:10px">His care is self-pay, and he doesn’t bill insurance.</p>
 <div class="docstrip" style="margin-top:28px"><span class="docstrip-p"><img src="../standins/ziegler-hero.jpg" alt="Dr. Connor Ziegler" loading="eager"></span><div><p class="docstrip-n">Connor Ziegler, MD</p><p class="docstrip-t">Board-certified orthopedic surgeon</p><p class="docstrip-d"><span>Sports medicine fellowship, The Steadman Clinic in Vail</span><span>Consulting surgeon, Springfield Thunderbirds</span></p></div></div>
 <figure style="margin-top:28px" hidden data-ifvideo>
 <div class="media" data-video="Booking page VSL, unified (Google Doc “Vitality Orthopedics VSLs”)" data-poster="https://assets.cdn.filesafe.space/jiPCbKw8uU8D9i3iQhpb/media/6a7cc45f47c48355a534914c.jpg" data-alt="Dr. Connor Ziegler"></div>
@@ -315,7 +314,7 @@
 <p><a href="tel:+18607353744" style="text-decoration:none">(860) 735-3744</a></p>
 </div>
 <div style="max-width:52ch;font-size:14px">
-<p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+<p><a href="https://www.vitalityorthopedics.com/about/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
 <p style="margin-top:10px">Individual results vary and are not guaranteed. This page is general education, not medical advice, a diagnosis or a treatment recommendation. Orthopedic and regenerative treatments carry risks and benefits to discuss with a licensed physician. Candidacy is decided only after an in-person evaluation.</p>
 <p style="margin-top:10px">© 2026 Vitality Orthopedics &amp; Biologics, PLLC</p>
 </div>
@@ -404,8 +403,14 @@
   });
   
   var EMBED_JS = 'https://link.msgsndr.com/js/form_embed.js';
-  var embedLoaded = false;
-  function loadEmbedJs() { if (embedLoaded) return; embedLoaded = true; var s = document.createElement('script'); s.src = EMBED_JS; s.async = true; document.body.appendChild(s); }
+  var embedLoaded = false, embedReady = false, embedWaiters = [];
+  function embedDone() { if (embedReady) return; embedReady = true; embedWaiters.splice(0).forEach(function (f) { f(); }); }
+  function loadEmbedJs(cb) {
+    if (cb) { if (embedReady) cb(); else embedWaiters.push(cb); }
+    if (embedLoaded) return; embedLoaded = true;
+    var s = document.createElement('script'); s.src = EMBED_JS; s.async = true; s.onload = embedDone; s.onerror = embedDone; document.body.appendChild(s);
+    setTimeout(embedDone, 4000);
+  }
   function passThrough(url) {
     var u = new URL(url);
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid', 'door', 'seg', 'first_name', 'last_name', 'email', 'phone'].forEach(function (k) { if (qs.get(k)) u.searchParams.set(k, qs.get(k)); });
@@ -425,8 +430,23 @@
   });
   $$('[data-calendar]').forEach(function (box) {
     if (!C.calendarId) return;
-    box.innerHTML = '<div class="embed"><iframe src="' + esc(passThrough('https://api.leadconnectorhq.com/widget/booking/' + C.calendarId)) + '" id="' + esc(C.calendarId) + '_vt2" title="Pick a time for your call" scrolling="no" style="min-height:640px"></iframe></div>';
-    loadEmbedJs();
+    box.innerHTML = '<div class="embed" style="min-height:640px"><p class="tiny" style="text-align:center;padding-top:24px">Loading the calendar...</p></div>';
+    loadEmbedJs(function () {
+      var holder = box.querySelector('.embed');
+      if (!holder || holder.querySelector('iframe')) return;
+      holder.removeAttribute('style');
+      holder.innerHTML = '<iframe src="' + esc(passThrough('https://api.leadconnectorhq.com/widget/booking/' + C.calendarId)) + '" id="' + esc(C.calendarId) + '_vt2" title="Pick a time for your call" scrolling="no" style="min-height:640px"></iframe>';
+      var frame = holder.querySelector('iframe');
+      var again = document.createElement('script'); again.src = EMBED_JS; document.body.appendChild(again);
+      var show = function () {
+        var cs = getComputedStyle(frame);
+        if (cs.visibility === 'hidden' || cs.opacity === '0' || frame.style.left === '-9999px') {
+          frame.style.opacity = '1'; frame.style.visibility = 'visible'; frame.style.pointerEvents = 'auto';
+          frame.style.display = 'block'; frame.style.left = ''; frame.style.position = 'relative';
+        }
+      };
+      setTimeout(show, 3000); setTimeout(show, 8000);
+    });
   });
   
   var ans = $('[data-answers]');

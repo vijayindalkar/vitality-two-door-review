@@ -177,9 +177,9 @@
 .vt2 #top > .wrap > .split > .c7{flex:1 1 0;min-width:0}
 .vt2 #top > .wrap > .split > .c5{flex:0 0 520px;min-width:0;position:sticky;top:96px}
 .vt2 .docstrip{display:flex;align-items:center;gap:18px;margin-top:clamp(24px,3vw,32px)}
-.vt2 .docstrip-p{flex:none;position:relative;display:block;width:88px;height:88px;border-radius:50%;overflow:hidden;background:var(--navy-2);
+.vt2 .docstrip-p{flex:none;position:relative;display:block;width:112px;height:112px;border-radius:50%;overflow:hidden;background:var(--navy-2);
   box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--action);margin:5px}
-.vt2 .docstrip-p img{position:absolute;display:block;width:145%;max-width:none;height:auto;left:-22.5%;top:-11.5%}
+.vt2 .docstrip-p img{position:absolute;display:block;width:100%;max-width:none;height:auto;left:0;top:0}
 .vt2 .docstrip > div{min-width:0}
 .vt2 .docstrip-n{margin:0;font-family:'Big Caslon CC','Libre Caslon Text','Big Caslon',Georgia,serif;font-size:24px;line-height:1.2;color:var(--ink)}
 .vt2 .docstrip-t{margin:4px 0 0;font-size:16px;font-weight:600;line-height:1.35;color:var(--action)}
@@ -198,7 +198,7 @@
 }
 @media (max-width:480px){
   .vt2 .docstrip{gap:14px}
-  .vt2 .docstrip-p{width:72px;height:72px}
+  .vt2 .docstrip-p{width:88px;height:88px}
   .vt2 .docstrip-n{font-size:21px}
   .vt2 .docstrip-t{font-size:15px}
   .vt2 .docstrip-d{font-size:13.5px}
@@ -218,7 +218,7 @@
 </div>
 <div data-reason="insurance" hidden>
 <h1 class="serif h1" style="font-size:clamp(32px,4vw,48px)">We’re probably not the right fit.</h1>
-<p class="lede" style="margin-top:16px">Dr. Ziegler’s care is self-pay, and he doesn’t bill insurance. Your primary care doctor or an in-network orthopedist can walk you through covered options. If you’d still like to learn more, his free guide is below.</p>
+<p class="lede" style="margin-top:16px">Your primary care doctor or an in-network orthopedist can walk you through covered options. If you’d still like to learn more, his free guide is below.</p>
 </div>
 <div class="card" style="margin-top:36px">
 <p class="eyebrow">Free guide from Dr. Connor Ziegler</p>
@@ -229,7 +229,7 @@
 <p class="small" style="margin-top:28px"><a href="https://www.vitalityorthopedics.com/">Visit vitalityorthopedics.com</a></p>
 </div>
 </section>
-<footer class="ftr"><div class="wrap"><p class="name">Vitality Orthopedics &amp; Biologics</p><p>720 Hopmeadow Street, Suite 102, Simsbury, CT 06070 · (860) 735-3744</p><p style="margin-top:8px;font-size:14px"><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p></div></footer>
+<footer class="ftr"><div class="wrap"><p class="name">Vitality Orthopedics &amp; Biologics</p><p>720 Hopmeadow Street, Suite 102, Simsbury, CT 06070 · (860) 735-3744</p><p style="margin-top:8px;font-size:14px"><a href="https://www.vitalityorthopedics.com/about/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p></div></footer>
 </div>
 <script>
 (function(){var r=new URLSearchParams(location.search).get('reason')||'timeline';var els=document.querySelectorAll('#vt2-guide [data-reason]');var hit=false;els.forEach(function(e){var on=e.getAttribute('data-reason')===r;e.hidden=!on;if(on)hit=true;});if(!hit)els[0].hidden=false;})();
